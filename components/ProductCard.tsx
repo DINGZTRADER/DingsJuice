@@ -1,7 +1,8 @@
 import React from 'react';
 import { View, Text, TouchableOpacity, ImageBackground } from 'react-native';
 import { Product } from '@/types';
-import { Plus } from 'lucide-react-native';
+import { Plus, Heart } from 'lucide-react-native';
+import { useFavorites } from '@/context/FavoritesContext';
 
 interface ProductCardProps {
     product: Product;
@@ -9,6 +10,9 @@ interface ProductCardProps {
 }
 
 export const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) => {
+    const { toggleFavorite, isFavorite } = useFavorites();
+    const isFav = isFavorite(product.id);
+
     return (
         <TouchableOpacity
             activeOpacity={0.9}
@@ -20,6 +24,14 @@ export const ProductCard: React.FC<ProductCardProps> = ({ product, onPress }) =>
                 className="h-48 w-full justify-end"
             >
                 <View className="absolute inset-0 bg-black/40" />
+
+                <TouchableOpacity
+                    onPress={() => toggleFavorite(product)}
+                    className="absolute top-3 right-3 p-2 bg-white/20 rounded-full"
+                >
+                    <Heart size={20} color={isFav ? "#43f906" : "#ffffff"} fill={isFav ? "#43f906" : "transparent"} />
+                </TouchableOpacity>
+
                 {product.label && (
                     <View className={`absolute top-3 left-3 px-2 py-1 rounded-full ${product.labelColor || 'bg-primary'}`}>
                         <Text className="text-[10px] font-bold text-white uppercase">{product.label}</Text>

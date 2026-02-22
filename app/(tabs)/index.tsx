@@ -7,6 +7,8 @@ import { Product, SizeOption } from '@/types';
 import { useCart } from '@/context/CartContext';
 import { useRouter } from 'expo-router';
 
+import { SizeSelectionModal } from '@/components/SizeSelectionModal';
+
 export default function HomeScreen() {
   const router = useRouter();
   const { cart, addToCart } = useCart();
@@ -111,58 +113,12 @@ export default function HomeScreen() {
         <View className="h-24" />
       </ScrollView>
 
-      {/* Size Selection Modal */}
-      <Modal
-        animationType="slide"
-        transparent={true}
+      <SizeSelectionModal
         visible={showSizeModal}
-        onRequestClose={() => setShowSizeModal(false)}
-      >
-        <View className="flex-1 justify-end bg-black/60">
-          <View className="bg-white dark:bg-slate-900 rounded-t-[32px] p-6 pb-12 shadow-2xl">
-            <View className="flex-row justify-between items-center mb-6">
-              <View>
-                <Text className="text-2xl font-bold text-slate-900 dark:text-white">{selectedProduct?.name}</Text>
-                <Text className="text-slate-500">Choose your size</Text>
-              </View>
-              <TouchableOpacity
-                onPress={() => setShowSizeModal(false)}
-                className="bg-slate-100 dark:bg-slate-800 p-2 rounded-full"
-              >
-                <X size={20} color="#64748b" />
-              </TouchableOpacity>
-            </View>
-
-            <View className="flex-row gap-4">
-              <TouchableOpacity
-                onPress={() => handleAddToCart('cup')}
-                className="flex-1 bg-slate-50 dark:bg-slate-800/50 border-2 border-primary/20 rounded-2xl p-5 items-center"
-              >
-                <View className="bg-primary/10 p-3 rounded-full mb-3">
-                  <CupSoda size={32} color="#43f906" />
-                </View>
-                <Text className="font-bold text-lg text-slate-900 dark:text-white">Cup</Text>
-                <Text className="text-primary font-black mt-1">UGX {selectedProduct?.prices.cup.toLocaleString()}</Text>
-              </TouchableOpacity>
-
-              <TouchableOpacity
-                onPress={() => handleAddToCart('big_bottle')}
-                className="flex-1 bg-slate-50 dark:bg-slate-800/50 border-2 border-primary rounded-2xl p-5 items-center"
-              >
-                <View className="bg-primary p-3 rounded-full mb-3">
-                  <ShoppingBag size={32} color="#0f172a" />
-                </View>
-                <Text className="font-bold text-lg text-slate-900 dark:text-white">Big Bottle</Text>
-                <Text className="text-slate-900 dark:text-primary font-black mt-1">UGX {selectedProduct?.prices.big_bottle.toLocaleString()}</Text>
-              </TouchableOpacity>
-            </View>
-
-            <Text className="text-center text-[10px] text-slate-400 mt-6 uppercase tracking-widest font-bold">
-              Pure Natural Sugarcane Base • No Added Sugar
-            </Text>
-          </View>
-        </View>
-      </Modal>
+        product={selectedProduct}
+        onClose={() => setShowSizeModal(false)}
+        onSelectSize={handleAddToCart}
+      />
     </SafeAreaView>
   );
 }
