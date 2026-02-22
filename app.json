@@ -1,0 +1,46 @@
+{
+  "expo": {
+    "name": "DingsJuice",
+    "slug": "dings-juice",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "dingsjuice",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dingsjuice.app"
+    },
+    "android": {
+      "package": "com.dingsjuice.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "backgroundColor": "#43f906",
+        "foregroundImage": "./assets/images/logo.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "googleServicesFile": "./google-services.json"
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/logo.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#43f906"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    }
+  }
+}
