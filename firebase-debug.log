@@ -1,0 +1,128 @@
+[debug] [2026-02-22T23:34:51.654Z] ----------------------------------------------------------------------
+[debug] [2026-02-22T23:34:51.684Z] Command:       C:\Users\deeja\AppData\Roaming\fnm\node-versions\v20.20.0\installation\node.exe C:\Users\deeja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js hosting:sites:list
+[debug] [2026-02-22T23:34:51.685Z] CLI Version:   15.1.0
+[debug] [2026-02-22T23:34:51.685Z] Platform:      win32
+[debug] [2026-02-22T23:34:51.685Z] Node Version:  v20.20.0
+[debug] [2026-02-22T23:34:51.686Z] Time:          Mon Feb 23 2026 02:34:51 GMT+0300 (East Africa Time)
+[debug] [2026-02-22T23:34:51.686Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-22T23:34:53.124Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-22T23:34:53.125Z] > authorizing via signed-in user (matokerepublic.art@gmail.com)
+[debug] [2026-02-22T23:34:53.125Z] [iam] checking project dingsjuice for permissions ["firebase.projects.get","firebasehosting.sites.get"]
+[debug] [2026-02-22T23:34:53.129Z] Checked if tokens are valid: false, expires at: 1771797139210
+[debug] [2026-02-22T23:34:53.130Z] Checked if tokens are valid: false, expires at: 1771797139210
+[debug] [2026-02-22T23:34:53.130Z] > refreshing access token with scopes: []
+[debug] [2026-02-22T23:34:53.137Z] >>> [apiv2][query] POST https://www.googleapis.com/oauth2/v3/token [none]
+[debug] [2026-02-22T23:34:53.139Z] >>> [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T23:34:55.902Z] <<< [apiv2][status] POST https://www.googleapis.com/oauth2/v3/token 200
+[debug] [2026-02-22T23:34:55.902Z] <<< [apiv2][body] POST https://www.googleapis.com/oauth2/v3/token [omitted]
+[debug] [2026-02-22T23:34:55.974Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions [none]
+[debug] [2026-02-22T23:34:55.974Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions x-goog-quota-user=projects/dingsjuice
+[debug] [2026-02-22T23:34:55.974Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.get"]}
+[debug] [2026-02-22T23:34:57.774Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions 200
+[debug] [2026-02-22T23:34:57.774Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.get"]}
+[debug] [2026-02-22T23:34:57.775Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:34:57.775Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:34:58.339Z] >>> [apiv2][query] GET https://firebasehosting.googleapis.com/v1beta1/projects/dingsjuice/sites pageToken=&pageSize=10
+[debug] [2026-02-22T23:35:00.946Z] <<< [apiv2][status] GET https://firebasehosting.googleapis.com/v1beta1/projects/dingsjuice/sites 200
+[debug] [2026-02-22T23:35:00.946Z] <<< [apiv2][body] GET https://firebasehosting.googleapis.com/v1beta1/projects/dingsjuice/sites {"sites":[{"name":"projects/dingsjuice/sites/dingsjuice","defaultUrl":"https://dingsjuice.web.app","type":"DEFAULT_SITE"},{"name":"projects/dingsjuice/sites/dingsjuice-c7581","defaultUrl":"https://dingsjuice-c7581.web.app","appId":"1:905783267177:web:268890fb22e22ee033b7f8","type":"USER_SITE"}]}
+[info] 
+[info] Sites for project dingsjuice
+[info] 
+[info] ┌──────────────────┬──────────────────────────────────┬───────────────────────────────────────────┐
+│ Site ID          │ Default URL                      │ App ID (if set)                           │
+├──────────────────┼──────────────────────────────────┼───────────────────────────────────────────┤
+│ dingsjuice       │ https://dingsjuice.web.app       │ --                                        │
+├──────────────────┼──────────────────────────────────┼───────────────────────────────────────────┤
+│ dingsjuice-c7581 │ https://dingsjuice-c7581.web.app │ 1:905783267177:web:268890fb22e22ee033b7f8 │
+└──────────────────┴──────────────────────────────────┴───────────────────────────────────────────┘
+[debug] [2026-02-22T23:50:27.037Z] ----------------------------------------------------------------------
+[debug] [2026-02-22T23:50:27.041Z] Command:       C:\Users\deeja\AppData\Roaming\fnm\node-versions\v20.20.0\installation\node.exe C:\Users\deeja\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy --only hosting
+[debug] [2026-02-22T23:50:27.041Z] CLI Version:   15.1.0
+[debug] [2026-02-22T23:50:27.042Z] Platform:      win32
+[debug] [2026-02-22T23:50:27.042Z] Node Version:  v20.20.0
+[debug] [2026-02-22T23:50:27.043Z] Time:          Mon Feb 23 2026 02:50:27 GMT+0300 (East Africa Time)
+[debug] [2026-02-22T23:50:27.043Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2026-02-22T23:51:43.206Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2026-02-22T23:51:43.207Z] > authorizing via signed-in user (matokerepublic.art@gmail.com)
+[debug] [2026-02-22T23:51:43.207Z] [iam] checking project dingsjuice for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2026-02-22T23:51:43.209Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:43.209Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:43.210Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions [none]
+[debug] [2026-02-22T23:51:43.211Z] >>> [apiv2][(partial)header] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions x-goog-quota-user=projects/dingsjuice
+[debug] [2026-02-22T23:51:43.211Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-22T23:51:46.195Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions 200
+[debug] [2026-02-22T23:51:46.195Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects/dingsjuice:testIamPermissions {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2026-02-22T23:51:46.205Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:46.205Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:46.206Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/projects/dingsjuice [none]
+[debug] [2026-02-22T23:51:47.987Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/projects/dingsjuice 200
+[debug] [2026-02-22T23:51:47.987Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/projects/dingsjuice {"projectId":"dingsjuice","projectNumber":"905783267177","displayName":"DingsJuice","name":"projects/dingsjuice","resources":{"hostingSite":"dingsjuice"},"state":"ACTIVE","etag":"1_ae9473b5-ac40-4e38-a3ce-cc066636fdb1"}
+[info] 
+[info] === Deploying to 'dingsjuice'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2026-02-22T23:51:48.010Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:48.010Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:48.010Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions [none]
+[debug] [2026-02-22T23:51:48.010Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions {"status":"CREATED","labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2026-02-22T23:51:52.799Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions 200
+[debug] [2026-02-22T23:51:52.799Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions {"name":"projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513","status":"CREATED","config":{},"labels":{"deployment-tool":"cli-firebase"}}
+[info] i  hosting[dingsjuice]: beginning deploy... 
+[info] i  hosting[dingsjuice]: found 1 files in dist 
+[debug] [2026-02-22T23:51:53.783Z] [hosting] uploading with 200 concurrency
+[debug] [2026-02-22T23:51:53.789Z] [hosting] hash cache [ZGlzdA] not populated
+[debug] [2026-02-22T23:51:53.811Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:53.811Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:53.820Z] [hosting] hash cache [ZGlzdA] stored for 1 files
+[debug] [2026-02-22T23:51:53.821Z] [hosting][hash queue][FINAL] {"max":17,"min":17,"avg":17,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":29}
+[debug] [2026-02-22T23:51:53.821Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513:populateFiles [none]
+[debug] [2026-02-22T23:51:53.822Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513:populateFiles {"files":{"/index.html":"5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524"}}
+[debug] [2026-02-22T23:51:54.512Z] <<< [apiv2][status] POST https://firebasehosting.googleapis.com/v1beta1/projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513:populateFiles 200
+[debug] [2026-02-22T23:51:54.512Z] <<< [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513:populateFiles {"uploadRequiredHashes":["5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524"],"uploadUrl":"https://upload-firebasehosting.googleapis.com/upload/sites/dingsjuice/versions/833a1fa81600b513/files"}
+[debug] [2026-02-22T23:51:54.513Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:54.513Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:54.513Z] >>> [apiv2][query] POST https://upload-firebasehosting.googleapis.com/upload/sites/dingsjuice/versions/833a1fa81600b513/files/5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524 [none]
+[debug] [2026-02-22T23:51:54.513Z] >>> [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dingsjuice/versions/833a1fa81600b513/files/5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524 [stream]
+[debug] [2026-02-22T23:51:54.515Z] [hosting][populate queue][FINAL] {"max":702,"min":702,"avg":702,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":704}
+[debug] [2026-02-22T23:51:54.515Z] [hosting] uploads queued: 1
+[debug] [2026-02-22T23:51:56.197Z] <<< [apiv2][status] POST https://upload-firebasehosting.googleapis.com/upload/sites/dingsjuice/versions/833a1fa81600b513/files/5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524 200
+[debug] [2026-02-22T23:51:56.198Z] <<< [apiv2][body] POST https://upload-firebasehosting.googleapis.com/upload/sites/dingsjuice/versions/833a1fa81600b513/files/5632f63326a16b65b23d396900a8020a3299ff9cde3893a9c30563d998eb0524 [stream]
+[debug] [2026-02-22T23:51:56.198Z] [hosting][upload queue][FINAL] {"max":1686,"min":1686,"avg":1686,"active":0,"complete":1,"success":1,"errored":0,"retried":0,"total":1,"elapsed":1686}
+[info] +  hosting[dingsjuice]: file upload complete 
+[debug] [2026-02-22T23:51:56.200Z] [hosting] deploy completed after 3397ms
+[debug] [2026-02-22T23:51:56.200Z] [
+  {
+    "config": {
+      "public": "dist",
+      "ignore": [
+        "firebase.json",
+        "**/.*",
+        "**/node_modules/**"
+      ],
+      "rewrites": [
+        {
+          "source": "**",
+          "destination": "/index.html"
+        }
+      ],
+      "site": "dingsjuice"
+    },
+    "version": "projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513"
+  }
+]
+[info] i  hosting[dingsjuice]: finalizing version... 
+[debug] [2026-02-22T23:51:56.203Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:56.203Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:56.401Z] >>> [apiv2][query] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions/833a1fa81600b513 updateMask=status%2Cconfig
+[debug] [2026-02-22T23:51:56.401Z] >>> [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions/833a1fa81600b513 {"status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]}}
+[debug] [2026-02-22T23:51:57.886Z] <<< [apiv2][status] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions/833a1fa81600b513 200
+[debug] [2026-02-22T23:51:57.886Z] <<< [apiv2][body] PATCH https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/versions/833a1fa81600b513 {"name":"projects/905783267177/sites/dingsjuice/versions/833a1fa81600b513","status":"FINALIZED","config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"},"createTime":"2026-02-22T23:51:51.574686Z","createUser":{"email":"matokerepublic.art@gmail.com"},"finalizeTime":"2026-02-22T23:51:58.895120Z","finalizeUser":{"email":"matokerepublic.art@gmail.com"}}
+[debug] [2026-02-22T23:51:57.886Z] [hosting] finalized version for dingsjuice:[object Object]
+[info] +  hosting[dingsjuice]: version finalized 
+[info] i  hosting[dingsjuice]: releasing new version... 
+[debug] [2026-02-22T23:51:57.887Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:57.887Z] Checked if tokens are valid: true, expires at: 1771806894905
+[debug] [2026-02-22T23:51:57.888Z] >>> [apiv2][query] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/channels/live/releases versionName=projects%2F905783267177%2Fsites%2Fdingsjuice%2Fversions%2F833a1fa81600b513
+[debug] [2026-02-22T23:51:57.888Z] >>> [apiv2][body] POST https://firebasehosting.googleapis.com/v1beta1/projects/-/sites/dingsjuice/channels/live/releases {}
